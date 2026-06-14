@@ -1,29 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/Hero";
+import { Atmosphere } from "@/components/Atmosphere";
+import { Menu } from "@/components/Menu";
+import { Location } from "@/components/Location";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "MIRAÉ Lounge — Hookah Bar in München" },
+      { name: "description", content: "Willkommen in der MIRAÉ Hookah Lounge — cinematic Atmosphäre, kuratierte Shisha-Sorten und feine Drinks in München." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <Atmosphere />
+      <Menu />
+      <Location />
+    </>
   );
 }
